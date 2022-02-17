@@ -1,0 +1,25 @@
+1]
+    while(l<=r){
+	mid = l + (r-l)/2;
+	}
+
+2]
+
+   if(condition(mid))
+	{
+   	left=mid;
+	}
+   else
+	{
+          right=mid-1;
+	}
+   Then you need to use mid=(left+right+1)/2.
+
+3]
+    if(condition(mid)){
+       left=mid+1;
+    }
+    else{
+       right=mid;
+    }
+    Then you need to use mid=(left+right)/2

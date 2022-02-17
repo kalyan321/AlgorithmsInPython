@@ -1,0 +1,6 @@
+
+1]Reverse linked list:-
+
+	prev = None
+        while head:
+            head.next,head,prev = prev,head.next,head
