@@ -9,14 +9,15 @@ class Graph:
     def addEdge(self, u, v):
         self.graph[u].append(v)
 
+    # this function Performs DFS
     def topologicalSortUtil(self, v, visited, stack):
 
         visited[v] = True
         for i in self.graph[v]:
             if not visited[i]:
                 self.topologicalSortUtil(i, visited, stack)
-        stack.append(v)
-        # print(stack,v)
+        stack.append(v)  # here the node v has no outgoing edges or all the outgoing
+        # edges are already stored in stack(i,e already visted)
 
     def topologicalSort(self):
         # Mark all the vertices as not visited
